@@ -1,0 +1,117 @@
+/* ===================== STATS ===================== */
+
+.stats {
+  background: #b8860b;
+  color: black;
+  padding: 60px 20px;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
+
+.stat-box h2 {
+  font-size: 40px;
+}
+
+.stat-box p {
+  font-weight: 600;
+}
+
+/* ===================== STATS – PROFESSIONAL ===================== */
+
+.stats {
+  background: #b8860b;
+  color: #1c1c1c;
+  padding: 80px 20px;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-box {
+  padding: 20px;
+}
+
+.stat-box h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ===================== STATS – PROFESSIONAL UPGRADE ===================== */
+
+.stats {
+  background: #b8860b;
+  color: #1c1c1c;
+  padding: 80px 20px;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.stat-box {
+  padding: 20px;
+}
+
+.stat-box h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* SUBTLE HOVER (DESKTOP ONLY) */
+@media (min-width: 900px) {
+  .stat-box {
+    transition: transform 0.3s ease;
+  }
+
+  .stat-box:hover {
+    transform: translateY(-6px);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .stats-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stat-box h2 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+}

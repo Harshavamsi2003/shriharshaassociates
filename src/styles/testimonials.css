@@ -1,0 +1,152 @@
+/* =========================================================
+   TESTIMONIALS – PROFESSIONAL FINAL
+   ========================================================= */
+
+.testimonials {
+  background: #f7f7f7;
+  padding: 130px 20px;
+  color: #1c1c1c;
+}
+
+.testimonials-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+/* =========================================================
+   WRAPPER
+   ========================================================= */
+
+.testimonial-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.testimonial-pro-card {
+  position: relative;
+  max-width: 860px;
+  background: #fff;
+  padding: 56px 64px;
+  border-left: 6px solid #b8860b;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.16);
+  animation: testimonialSlide 0.6s ease;
+}
+
+/* QUOTE */
+.quote-mark {
+  position: absolute;
+  top: -20px;
+  left: 30px;
+  font-size: 72px;
+  font-weight: 900;
+  color: rgba(184, 134, 11, 0.18);
+}
+
+/* TEXT */
+.testimonial-text {
+  font-size: 18.5px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* AUTHOR */
+.testimonial-author h4 {
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.testimonial-author span {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #777;
+}
+
+/* =========================================================
+   ARROWS
+   ========================================================= */
+
+.testimonial-arrow {
+  background: none;
+  border: none;
+  font-size: 48px;
+  font-weight: 400;
+  color: #b8860b;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.testimonial-arrow:hover {
+  transform: scale(1.15);
+  opacity: 0.8;
+}
+
+/* =========================================================
+   PROGRESS
+   ========================================================= */
+
+.testimonial-progress {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.testimonial-progress span {
+  width: 28px;
+  height: 3px;
+  background: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testimonial-progress span.active {
+  background: #b8860b;
+  width: 44px;
+}
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
+@keyframes testimonialSlide {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .testimonial-wrapper {
+    gap: 0;
+  }
+
+  .testimonial-arrow {
+    display: none;
+  }
+
+  .testimonial-pro-card {
+    padding: 38px 30px;
+  }
+
+  .testimonial-text {
+    font-size: 16.5px;
+  }
+}

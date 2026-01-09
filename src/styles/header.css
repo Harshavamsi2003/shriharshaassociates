@@ -1,0 +1,117 @@
+/* ===================== HEADER (ON HERO IMAGE) ===================== */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #b8860b;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.nav a:hover {
+  color: #b8860b;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===================== HEADER (REFINED) ===================== */
+
+.header {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+}
+
+.header-container {
+  max-width: 1400px;
+  padding: 20px 32px;
+}
+
+.nav a {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.menu-btn {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* ===================== HEADER SCROLL EFFECT ===================== */
+
+.header-scrolled {
+  background: rgba(0, 0, 0, 0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ===================== MOBILE MENU ===================== */
+
+@media (max-width: 900px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    transition: right 0.4s ease;
+    z-index: 999;
+  }
+
+  .nav.open {
+    right: 0;
+  }
+
+  .nav a {
+    font-size: 22px;
+  }
+}

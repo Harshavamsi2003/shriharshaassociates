@@ -1,0 +1,328 @@
+/* ===================== ABOUT ===================== */
+
+.about {
+  background: #f5f5f5;
+  color: #1c1c1c;
+  padding: 100px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* ===================== ABOUT – PROFESSIONAL ===================== */
+
+.about {
+  background: #f5f5f5;
+  color: #1c1c1c;
+  padding: 120px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+.about-text h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* ===================== ABOUT – PREMIUM PROFESSIONAL ===================== */
+
+.about {
+  background: #f5f5f5;
+  color: #1c1c1c;
+  padding: 130px 20px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===================== ABOUT – COMPACT PREMIUM + ANIMATION ===================== */
+
+.about-grid {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+}
+
+/* SHARED CARD */
+.company-box,
+.founder-box {
+  background: white;
+  padding: 36px 42px;
+  border-left: 5px solid #b8860b;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.company-box:hover,
+.founder-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.18);
+}
+
+/* HEADINGS */
+.about-text h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+/* TEXT – COMPACT */
+.about-text p {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #444;
+  margin-bottom: 14px;
+}
+
+/* ===================== COMPANY ===================== */
+
+.company-profile {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 26px;
+}
+
+.company-profile img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: contain;
+  padding: 18px;
+  border: 5px solid #b8860b;
+  background: white;
+  transition: transform 0.4s ease;
+}
+
+.company-box:hover .company-profile img {
+  transform: scale(1.05);
+}
+
+/* ===================== FOUNDER ===================== */
+
+.founder-profile {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 24px;
+}
+
+.founder-profile img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #b8860b;
+  transition: transform 0.4s ease;
+}
+
+.founder-box:hover .founder-profile img {
+  transform: scale(1.05);
+}
+
+.founder-info h4 {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 6px;
+}
+
+.founder-info span {
+  font-size: 15px;
+  font-weight: 600;
+  color: #777;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .company-box,
+  .founder-box {
+    padding: 32px;
+  }
+
+  .company-profile img,
+  .founder-profile img {
+    width: 170px;
+    height: 170px;
+  }
+
+  .founder-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   ABOUT – SPACIOUS + BIG TEXT + FIXED HEIGHT (FINAL)
+   ========================================================= */
+
+.about {
+  padding: 130px 26px !important;
+}
+
+.about-grid {
+  max-width: 1480px;
+  margin: 70px auto 0;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 70px;
+  align-items: stretch;
+}
+
+.company-box,
+.founder-box {
+  background: #ffffff;
+  padding: 52px 56px;
+  border-left: 6px solid #b8860b;
+  box-shadow: 0 26px 60px rgba(0,0,0,0.16);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@media (min-width: 1200px) {
+  .company-box,
+  .founder-box {
+    min-height: 700px;
+  }
+}
+
+.company-box h3,
+.founder-box h3 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 26px;
+}
+
+.company-profile {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 34px;
+}
+
+.company-profile img {
+  width: 230px;
+  height: 230px;
+  padding: 18px;
+  border-radius: 50%;
+  border: 6px solid #b8860b;
+  background: #fff;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.founder-profile {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 32px;
+}
+
+.founder-profile img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #b8860b;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.founder-info h4 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 8px;
+  color: #1c1c1c;
+}
+
+.founder-info span {
+  font-size: 17px;
+  font-weight: 700;
+  color: #777;
+}
+
+.company-box p,
+.founder-box p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+.company-box p:last-child,
+.founder-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .company-box,
+  .founder-box {
+    min-height: auto;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about {
+    padding: 100px 20px !important;
+  }
+
+  .company-box,
+  .founder-box {
+    padding: 40px;
+  }
+
+  .founder-profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-profile img,
+  .founder-profile img {
+    width: 185px;
+    height: 185px;
+  }
+
+  .company-box p,
+  .founder-box p {
+    font-size: 16.5px;
+  }
+}
