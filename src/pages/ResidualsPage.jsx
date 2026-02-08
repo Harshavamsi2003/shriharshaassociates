@@ -44,7 +44,7 @@ export default function ResidualsPage() {
         <section className="residuals-hero">
           <div className="residuals-hero-overlay"></div>
           <div className="residuals-hero-content">
-            <h2>Residentials</h2>
+            <h2>Apartments & Villas</h2>
             <p className="residuals-desc">Where architectural excellence meets the art of refined living</p>
           </div>
         </section>
@@ -147,4 +147,5 @@ export default function ResidualsPage() {
       <Footer />
     </>
   );
+
 }
