@@ -1,5 +1,5 @@
 import logo from "../assets/logo.png";
-import founder from "../assets/founder1.png";
+import founder from "../assets/founder3.png";
 import "../styles/about-page.css";
 
 export default function AboutPage() {
