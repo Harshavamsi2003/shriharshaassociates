@@ -2,7 +2,7 @@
    HEADER – ENHANCED PROFESSIONAL WITH DROPDOWN
    Transparent on home page, solid on scroll/other pages
    Fonts: Playfair Display + Montserrat
-   UPDATED: Reduced gap between logo and company name
+   UPDATED: Minimal gap between logo and company name
 ========================================================= */
 
 .site-header {
@@ -34,13 +34,13 @@
 }
 
 /* =========================================================
-   BRAND SECTION - REDUCED GAP BETWEEN LOGO & TEXT
+   BRAND SECTION - MINIMAL GAP BETWEEN LOGO & TEXT
 ========================================================= */
 
 .header-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -50,7 +50,7 @@
 }
 
 .header-brand img {
-  height: 80px;
+  height: 88px;
   width: auto;
   transition: transform 0.3s ease;
   filter: brightness(1.05);
@@ -438,11 +438,11 @@
   }
 
   .header-brand {
-    gap: 10px;
+    gap: 8px;
   }
 
   .header-brand img {
-    height: 72px;
+    height: 80px;
   }
 
   .brand-text h1 {
@@ -474,11 +474,11 @@
   }
 
   .header-brand {
-    gap: 9px;
+    gap: 7px;
   }
 
   .header-brand img {
-    height: 66px;
+    height: 72px;
   }
 
   .brand-text h1 {
@@ -522,11 +522,11 @@
   }
 
   .header-brand {
-    gap: 8px;
+    gap: 6px;
   }
 
   .header-brand img {
-    height: 62px;
+    height: 68px;
   }
 
   .brand-text h1 {
@@ -573,11 +573,11 @@
   }
 
   .header-brand {
-    gap: 7px;
+    gap: 5px;
   }
 
   .header-brand img {
-    height: 58px;
+    height: 64px;
   }
 
   .brand-text h1 {
