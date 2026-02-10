@@ -26,7 +26,6 @@
 //     setIsSubmitting(true);
 //     setSubmitStatus('');
 
-//     // Create mailto link with form data
 //     const subject = encodeURIComponent(`New Enquiry from ${formData.name}`);
 //     const body = encodeURIComponent(
 //       `Name: ${formData.name}\n` +
@@ -36,11 +35,8 @@
 //     );
     
 //     const mailtoLink = `mailto:info@shriharshaassociates.com?subject=${subject}&body=${body}`;
-    
-//     // Open mail client
 //     window.location.href = mailtoLink;
     
-//     // Reset form after a delay
 //     setTimeout(() => {
 //       setFormData({
 //         name: '',
@@ -67,13 +63,18 @@
 //           </p>
 //         </div>
 
-//         {/* TWO COLUMN LAYOUT */}
-//         <div className="contact-content">
+//         {/* PREMIUM LAYOUT */}
+//         <div className="contact-wrapper">
           
-//           {/* LEFT: FORM */}
-//           <div className="contact-form-section">
-//             <div className="contact-form">
-//               <form onSubmit={handleSubmit}>
+//           {/* FORM SECTION */}
+//           <div className="contact-form-container">
+//             <div className="form-title">
+//               <h3>Send us a Message</h3>
+//               <p>Fill out the form and we'll get back to you shortly</p>
+//             </div>
+            
+//             <form onSubmit={handleSubmit} className="contact-form">
+//               <div className="form-row">
 //                 <div className="form-group">
 //                   <input 
 //                     type="text" 
@@ -95,87 +96,110 @@
 //                   />
 //                   <label className={formData.email ? 'active' : ''}>Email</label>
 //                 </div>
+//               </div>
 
-//                 <div className="form-group">
-//                   <input 
-//                     type="tel" 
-//                     name="phone"
-//                     value={formData.phone}
-//                     onChange={handleChange}
-//                     required 
-//                   />
-//                   <label className={formData.phone ? 'active' : ''}>Phone</label>
-//                 </div>
+//               <div className="form-group">
+//                 <input 
+//                   type="tel" 
+//                   name="phone"
+//                   value={formData.phone}
+//                   onChange={handleChange}
+//                   required 
+//                 />
+//                 <label className={formData.phone ? 'active' : ''}>Phone</label>
+//               </div>
 
-//                 <div className="form-group">
-//                   <textarea 
-//                     name="message"
-//                     value={formData.message}
-//                     onChange={handleChange}
-//                     rows="5" 
-//                     required
-//                   ></textarea>
-//                   <label className={formData.message ? 'active' : ''}>Project Details</label>
-//                 </div>
+//               <div className="form-group">
+//                 <textarea 
+//                   name="message"
+//                   value={formData.message}
+//                   onChange={handleChange}
+//                   rows="5" 
+//                   required
+//                 ></textarea>
+//                 <label className={formData.message ? 'active' : ''}>Project Details</label>
+//               </div>
 
-//                 <button type="submit" disabled={isSubmitting}>
-//                   <span>{isSubmitting ? 'Sending...' : 'Submit Enquiry'}</span>
-//                 </button>
+//               <button type="submit" disabled={isSubmitting} className="submit-btn">
+//                 <span>{isSubmitting ? 'Sending...' : 'Submit Enquiry'}</span>
+//                 <i className="fas fa-arrow-right"></i>
+//               </button>
 
-//                 {submitStatus && (
-//                   <p className="submit-status">{submitStatus}</p>
-//                 )}
-//               </form>
-//             </div>
+//               {submitStatus && (
+//                 <p className="submit-status">{submitStatus}</p>
+//               )}
+//             </form>
 //           </div>
 
-//           {/* RIGHT: INFO + MAP */}
-//           <div className="contact-info-section">
+//           {/* INFO + MAP SECTION */}
+//           <div className="contact-info-container">
             
-//             {/* ADDRESS CARD */}
-//             <div className="contact-details-grid">
-//               <div className="detail-card">
-//                 <div className="detail-content">
-//                   <strong>Address</strong>
-//                   <span>
+//             {/* CONTACT CARDS */}
+//             <div className="contact-cards">
+//               <div className="info-card">
+//                 <div className="card-icon">
+//                   <i className="fas fa-map-marker-alt"></i>
+//                 </div>
+//                 <div className="card-content">
+//                   <h4>Visit Us</h4>
+//                   <p>
 //                     No.7, Vivekanandhar Street,<br />
-//                     Thirumoolar Colony, Anna Nagar West,<br />
+//                     Thirumoolar Colony,<br />
+//                     Anna Nagar West,<br />
 //                     Chennai – 600040
-//                   </span>
+//                   </p>
 //                 </div>
 //               </div>
 
-//               <div className="detail-card">
-//                 <div className="detail-content">
-//                   <strong>Phone</strong>
-//                   <span>+91 98414 19288</span>
+//               <div className="info-card">
+//                 <div className="card-icon">
+//                   <i className="fas fa-phone-alt"></i>
+//                 </div>
+//                 <div className="card-content">
+//                   <h4>Call Us</h4>
+//                   <p>+91 98414 19288</p>
 //                 </div>
 //               </div>
 
-//               <div className="detail-card">
-//                 <div className="detail-content">
-//                   <strong>Email</strong>
-//                   <span>info@shriharshaassociates.com</span>
+//               <div className="info-card">
+//                 <div className="card-icon">
+//                   <i className="fas fa-envelope"></i>
+//                 </div>
+//                 <div className="card-content">
+//                   <h4>Email Us</h4>
+//                   <p>info@shriharshaassociates.com</p>
 //                 </div>
 //               </div>
 //             </div>
 
-//             {/* MAP */}
-//             <div className="contact-map">
-//               <iframe
-//                 title="Shri Harsha Associates Location"
-//                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1321341485736!2d80.20357487484407!3d13.085946112231362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265b2a2dfcc7b%3A0x8b8d7f17b6cdb02f!2sVivekanandhar%20St%2C%20Anna%20Nagar%20West%2C%20Chennai%2C%20Tamil%20Nadu%20600040!5e0!3m2!1sen!2sin!4v1732720000000"
-//                 loading="lazy"
-//                 referrerPolicy="no-referrer-when-downgrade"
-//               ></iframe>
-//             </div>
+//             {/* CLICKABLE MAP */}
+//             <a 
+//               href="https://maps.app.goo.gl/hFjQJichhgVMhMiv6" 
+//               target="_blank" 
+//               rel="noopener noreferrer"
+//               className="contact-map-link"
+//             >
+//               <div className="contact-map">
+//                 <iframe
+//                   title="Shri Harsha Associates Location"
+//                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.1321341485736!2d80.20357487484407!3d13.085946112231362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265b2a2dfcc7b%3A0x8b8d7f17b6cdb02f!2sVivekanandhar%20St%2C%20Anna%20Nagar%20West%2C%20Chennai%2C%20Tamil%20Nadu%20600040!5e0!3m2!1sen!2sin!4v1732720000000"
+//                   loading="lazy"
+//                   referrerPolicy="no-referrer-when-downgrade"
+//                   style={{ pointerEvents: 'none' }}
+//                 ></iframe>
+//                 <div className="map-overlay">
+//                   <i className="fas fa-external-link-alt"></i>
+//                   <span>Open in Google Maps</span>
+//                 </div>
+//               </div>
+//             </a>
 
-//             {/* SOCIAL LINKS - NO LINKEDIN */}
+//             {/* SOCIAL LINKS */}
 //             <div className="contact-socials">
 //               <a 
 //                 href="tel:+919841419288" 
 //                 aria-label="Call us"
-//                 className="social-icon"
+//                 className="social-link"
 //               >
 //                 <i className="fas fa-phone"></i>
 //               </a>
@@ -184,7 +208,7 @@
 //                 target="_blank" 
 //                 rel="noopener noreferrer"
 //                 aria-label="WhatsApp"
-//                 className="social-icon"
+//                 className="social-link"
 //               >
 //                 <i className="fab fa-whatsapp"></i>
 //               </a>
@@ -193,14 +217,14 @@
 //                 target="_blank" 
 //                 rel="noopener noreferrer"
 //                 aria-label="Instagram"
-//                 className="social-icon"
+//                 className="social-link"
 //               >
 //                 <i className="fab fa-instagram"></i>
 //               </a>
 //               <a 
 //                 href="mailto:info@shriharshaassociates.com" 
 //                 aria-label="Email us"
-//                 className="social-icon"
+//                 className="social-link"
 //               >
 //                 <i className="fas fa-envelope"></i>
 //               </a>
@@ -248,7 +272,7 @@ export default function Contact() {
       `Project Details:\n${formData.message}`
     );
     
-    const mailtoLink = `mailto:info@shriharshaassociates.com?subject=${subject}&body=${body}`;
+    const mailtoLink = `mailto:harshavamsiprakash@gmail.com?subject=${subject}&body=${body}`;
     window.location.href = mailtoLink;
     
     setTimeout(() => {
@@ -381,7 +405,7 @@ export default function Contact() {
                 </div>
                 <div className="card-content">
                   <h4>Email Us</h4>
-                  <p>info@shriharshaassociates.com</p>
+                  <p>harshavamsiprakash@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -436,7 +460,7 @@ export default function Contact() {
                 <i className="fab fa-instagram"></i>
               </a>
               <a 
-                href="mailto:info@shriharshaassociates.com" 
+                href="mailto:harshavamsiprakash@gmail.com" 
                 aria-label="Email us"
                 className="social-link"
               >
